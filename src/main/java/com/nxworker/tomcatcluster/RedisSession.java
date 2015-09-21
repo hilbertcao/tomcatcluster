@@ -9,7 +9,7 @@ import java.util.logging.Logger;
 
 
 public class RedisSession extends StandardSession {
-  private static Logger log = Logger.getLogger("com.lm.b2c.tomcatcluster.RedisSession");
+  private static Logger log = Logger.getLogger("com.nxworker.tomcatcluster.RedisSession");
 
   protected static Boolean manualDirtyTrackingSupportEnabled = false;
 

@@ -35,9 +35,9 @@ public class RedisSessionManager extends ManagerBase implements Lifecycle {
     protected ThreadLocal<Boolean> currentSessionIsPersisted = new ThreadLocal<Boolean>();
     protected Serializer serializer;
 
-    protected static String name = "com.lm.b2c.tomcatcluster.RedisSessionManager";
+    protected static String name = "com.nxworker.tomcatcluster.RedisSessionManager";
 
-    protected String serializationStrategyClass = "com.lm.b2c.tomcatcluster.JavaSerializer";
+    protected String serializationStrategyClass = "com.nxworker.tomcatcluster.JavaSerializer";
 
     /**
      * The lifecycle event support for this component.
@@ -172,7 +172,7 @@ public class RedisSessionManager extends ManagerBase implements Lifecycle {
             if (valve instanceof RedisSessionHandlerValve) {
                 this.handlerValve = (RedisSessionHandlerValve) valve;
                 this.handlerValve.setRedisSessionManager(this);
-                log.info("Attached to com.lm.b2c.tomcatcluster.RedisSessionHandlerValve");
+                log.info("Attached to com.nxworker.tomcatcluster.RedisSessionHandlerValve");
                 attachedToValve = true;
                 break;
             }
