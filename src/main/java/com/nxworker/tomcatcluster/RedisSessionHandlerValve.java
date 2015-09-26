@@ -22,7 +22,6 @@ public class RedisSessionHandlerValve extends ValveBase {
   @Override
   public void invoke(Request request, Response response) throws IOException, ServletException {
     try {
-      System.out.println(manager.getMaxInactiveInterval());
       getNext().invoke(request, response);
     } finally {
       final Session session = request.getSessionInternal(false);
